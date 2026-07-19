@@ -271,6 +271,98 @@ nav a:hover{background:var(--glass);color:var(--ink)}
 .mini-row .t{font-size:13px;font-weight:600;color:var(--gold-soft)}
 .mini-row .d{font-size:13px;color:var(--ink-dim);line-height:1.5}
 
+/* ============ CROP CARDS ============ */
+.crop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.crop-card{padding:20px 18px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--glass-border);transition:transform .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease)}
+.crop-card:hover{transform:translateY(-5px);border-color:var(--glass-border-hi);background:rgba(255,255,255,.05)}
+.crop-card .cc-icon{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg, rgba(125,181,90,.28), rgba(227,168,59,.16));display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.crop-card .cc-icon svg{width:18px;height:18px;stroke:var(--gold-soft);fill:none;stroke-width:1.6}
+.crop-card h5{font-size:14.5px;color:var(--ink);margin-bottom:6px;font-weight:600}
+.crop-card p{font-size:12.5px;color:var(--ink-dim);line-height:1.55;margin-bottom:12px}
+.crop-card .cc-tag{font-family:var(--ff-mono);font-size:10px;color:var(--gold-soft);text-transform:uppercase;letter-spacing:.08em}
+
+/* ============ ECOSYSTEM CONNECTION CARDS ============ */
+.eco-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.eco-card{padding:26px;transition:transform .35s var(--ease), border-color .35s var(--ease)}
+.eco-card:hover{transform:translateY(-6px);border-color:var(--glass-border-hi)}
+.eco-link{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.eco-logo{width:48px;height:48px;border-radius:13px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--glass-border);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.eco-logo img{width:100%;height:100%;object-fit:cover}
+.eco-plus{width:26px;height:26px;border-radius:50%;background:var(--glass-hi);border:1px solid var(--glass-border-hi);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.eco-plus svg{width:12px;height:12px;stroke:var(--gold-soft);fill:none;stroke-width:2.4}
+.eco-card h5{font-size:15.5px;color:var(--ink);font-weight:600;margin-bottom:10px}
+.eco-card p{font-size:13.5px;color:var(--ink-dim);line-height:1.65}
+@media(max-width:700px){.eco-grid{grid-template-columns:1fr}}
+
+/* ============ PARTNER CARDS ============ */
+.partner-group{margin-bottom:40px}
+.partner-group:last-child{margin-bottom:0}
+.partner-group-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.partner-group-head h4{font-size:15px;color:var(--ink);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.partner-group-head .line{flex:1;height:1px;background:var(--glass-border)}
+.partner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.partner-card{padding:22px;display:flex;gap:16px;align-items:flex-start;transition:transform .3s var(--ease), border-color .3s var(--ease)}
+.partner-card:hover{transform:translateY(-4px);border-color:var(--glass-border-hi)}
+.partner-card .p-icon{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;overflow:hidden;
+  background:rgba(255,255,255,.06);border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+}
+.partner-card .p-icon img{width:100%;height:100%;object-fit:cover}
+.partner-card h5{font-size:14.5px;color:var(--ink);font-weight:600;margin-bottom:6px;line-height:1.35}
+.partner-card p{font-size:12.5px;color:var(--ink-dim);line-height:1.55}
+@media(max-width:700px){.partner-grid{grid-template-columns:1fr}}
+
+/* ============ SUSTAINABILITY CARDS ============ */
+.sustain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.sustain-card{padding:26px 22px;transition:transform .35s var(--ease), border-color .35s var(--ease)}
+.sustain-card:hover{transform:translateY(-6px);border-color:var(--glass-border-hi)}
+.sustain-card .sc-icon{
+  width:46px;height:46px;border-radius:13px;
+  background:linear-gradient(135deg, rgba(125,181,90,.28), rgba(227,168,59,.16));
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.sustain-card .sc-icon svg{width:21px;height:21px;stroke:var(--gold-soft);fill:none;stroke-width:1.6}
+.sustain-card h5{font-size:15px;color:var(--ink);font-weight:600;margin-bottom:8px}
+.sustain-card p{font-size:13px;color:var(--ink-dim);line-height:1.6}
+
+/* ============ IMPACT STATS ============ */
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+.impact-stat{padding:28px 22px;text-align:center;transition:transform .35s var(--ease), border-color .35s var(--ease)}
+.impact-stat:hover{transform:translateY(-6px);border-color:var(--glass-border-hi)}
+.impact-stat .is-icon{
+  width:40px;height:40px;border-radius:12px;margin:0 auto 16px;
+  background:linear-gradient(135deg, rgba(125,181,90,.28), rgba(227,168,59,.16));
+  display:flex;align-items:center;justify-content:center;
+}
+.impact-stat .is-icon svg{width:18px;height:18px;stroke:var(--gold-soft);fill:none;stroke-width:1.6}
+.impact-stat .is-num{font-family:var(--ff-display);font-size:clamp(22px,2.6vw,30px);font-weight:600;color:var(--gold-soft);line-height:1.1;margin-bottom:8px}
+.impact-stat .is-label{font-size:12.5px;color:var(--ink-dim);line-height:1.4}
+.impact-notes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.impact-note{padding:24px 26px;display:flex;gap:16px;align-items:flex-start}
+.impact-note .in-icon{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;
+  background:rgba(227,168,59,.14);border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+}
+.impact-note .in-icon svg{width:19px;height:19px;stroke:var(--gold-soft);fill:none;stroke-width:1.6}
+.impact-note h5{font-size:14px;color:var(--ink);font-weight:600;margin-bottom:6px}
+.impact-note p{font-size:13px;color:var(--ink-dim);line-height:1.55}
+@media(max-width:900px){.impact-grid{grid-template-columns:repeat(2,1fr)}.impact-notes{grid-template-columns:1fr}}
+@media(max-width:500px){.impact-grid{grid-template-columns:1fr 1fr}}
+
+/* ============ BUSINESS MODEL FLOW ============ */
+.biz-flow{display:flex;flex-direction:column}
+.biz-step{display:flex;gap:18px;padding-bottom:26px;position:relative}
+.biz-step:last-child{padding-bottom:0}
+.biz-step:not(:last-child)::before{content:'';position:absolute;left:19px;top:44px;bottom:0;width:1px;background:var(--glass-border)}
+.biz-num{width:38px;height:38px;border-radius:50%;background:var(--glass-hi);border:1px solid var(--glass-border-hi);display:flex;align-items:center;justify-content:center;font-family:var(--ff-mono);font-size:13px;color:var(--gold-soft);flex-shrink:0;z-index:1}
+.biz-step .biz-body{padding-top:6px}
+.biz-step h5{font-size:14.5px;color:var(--ink);margin-bottom:4px;font-weight:600}
+.biz-step p{font-size:13px;color:var(--ink-dim);line-height:1.6}
+
+
+
 /* ============ WEATHER DASHBOARD ============ */
 .weather-dash{padding:36px;display:grid;grid-template-columns:1.1fr 1.6fr;gap:36px;overflow:hidden}
 .dash-bg{position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:inherit}
@@ -617,6 +709,14 @@ footer{padding:70px 0 30px;border-top:1px solid var(--glass-border)}
       <div class="about-copy">
         <p>M-Farms is more than an agricultural enterprise — it is a subsidiary of Marvini Elite Enterprises, integrating technology-enabled farming, eco village development, and agri tourism into one ecosystem.</p>
         <p>M-Farms is where tradition meets innovation. We honour Africa's agricultural heritage while embracing modern technology to build farms that are productive, sustainable, and community-centred.</p>
+        <p><strong style="color:var(--ink)">Our Mission:</strong> <i>To modernise agriculture through technology, empower farming communities, promote sustainable practices, and create integrated rural ecosystems that generate economic, social and environmental value.</i></p>
+      </div>
+      <div class="mini-table" style="margin-top:24px">
+        <div class="mini-row"><span class="t">Inspiring</span><span class="d">We paint a vision of a prosperous, food-secure Africa</span></div>
+        <div class="mini-row"><span class="t">Authentic</span><span class="d">We speak from experience and respect for the land</span></div>
+        <div class="mini-row"><span class="t">Empowering</span><span class="d">We believe in the power of farmers and communities</span></div>
+        <div class="mini-row"><span class="t">Innovative</span><span class="d">We embrace technology as a tool for transformation</span></div>
+        <div class="mini-row"><span class="t">Sustainable</span><span class="d">We think in generations, not seasons</span></div>
       </div>
       <div style="display:flex;gap:14px;margin-top:28px">
         <a href="#pillars" class="btn btn-glass">See the three pillars</a>
@@ -692,7 +792,76 @@ footer{padding:70px 0 30px;border-top:1px solid var(--glass-border)}
           <div class="mini-row"><span class="t">Precision Agriculture</span><span class="d">GPS-guided planting, variable-rate inputs</span></div>
           <div class="mini-row"><span class="t">IoT Sensors</span><span class="d">Soil moisture, temperature &amp; nutrient monitoring</span></div>
           <div class="mini-row"><span class="t">Drone Technology</span><span class="d">Crop monitoring, pest detection, aerial spraying</span></div>
+          <div class="mini-row"><span class="t">AI Powered Analytics</span><span class="d">Predictive modelling for planting, harvesting &amp; market timing</span></div>
+          <div class="mini-row"><span class="t">Automated Irrigation</span><span class="d">Drip &amp; sprinkler systems with remote control</span></div>
           <div class="mini-row"><span class="t">Blockchain Traceability</span><span class="d">Immutable records from farm to fork</span></div>
+        </div>
+        <div style="grid-column:1/-1;margin-top:8px">
+          <span class="tag">Our Crops</span>
+          <div class="crop-grid" style="margin-bottom:32px">
+            <div class="crop-card">
+              <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M7 20h10M12 20V10M12 10C12 10 5 10 5 3C12 3 12 10 12 10ZM12 10C12 10 19 10 19 3C12 3 12 10 12 10Z"/></svg></div>
+              <h5>Staples</h5>
+              <p>Maize, rice, cassava, yam</p>
+              <span class="cc-tag">Domestic food security</span>
+            </div>
+            <div class="crop-card">
+              <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z"/></svg></div>
+              <h5>Vegetables</h5>
+              <p>Tomatoes, peppers, onions, okra</p>
+              <span class="cc-tag">Domestic &amp; export</span>
+            </div>
+            <div class="crop-card">
+              <div class="cc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 6V3M12 3c1.5 0 2.5 1 2.5 1"/></svg></div>
+              <h5>Fruits</h5>
+              <p>Mango, pineapple, pawpaw, citrus</p>
+              <span class="cc-tag">Export &amp; processing</span>
+            </div>
+            <div class="crop-card">
+              <div class="cc-icon"><svg viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/></svg></div>
+              <h5>Cash Crops</h5>
+              <p>Cashew, shea, cocoa</p>
+              <span class="cc-tag">Export</span>
+            </div>
+            <div class="crop-card">
+              <div class="cc-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="10" r="4"/><path d="M13 10c2 0 4 1.5 4 4s-1 4-4 4M5 21c0-3 2-5 4-5"/></svg></div>
+              <h5>Livestock</h5>
+              <p>Poultry, pigs, pasture-raised cattle</p>
+              <span class="cc-tag">Domestic protein</span>
+            </div>
+          </div>
+
+          <span class="tag">Our Business Model</span>
+          <div class="biz-flow" style="margin-top:12px">
+            <div class="biz-step">
+              <div class="biz-num">01</div>
+              <div class="biz-body">
+                <h5>Core Operations</h5>
+                <p>We operate our own commercial farms using technology &amp; sustainable practices.</p>
+              </div>
+            </div>
+            <div class="biz-step">
+              <div class="biz-num">02</div>
+              <div class="biz-body">
+                <h5>Out-Grower Model</h5>
+                <p>We partner with smallholder farmers who receive inputs, training &amp; guaranteed market access.</p>
+              </div>
+            </div>
+            <div class="biz-step">
+              <div class="biz-num">03</div>
+              <div class="biz-body">
+                <h5>Value Addition</h5>
+                <p>We process on site to reduce post-harvest losses &amp; increase margins.</p>
+              </div>
+            </div>
+            <div class="biz-step">
+              <div class="biz-num">04</div>
+              <div class="biz-body">
+                <h5>Market Channels</h5>
+                <p>We supply M Digital Food Chain, supermarkets, exporters &amp; food processors.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="pillar-panel" id="p2">
@@ -709,7 +878,28 @@ footer{padding:70px 0 30px;border-top:1px solid var(--glass-border)}
           <div class="mini-row"><span class="t">Farm Hub</span><span class="d">Centralised operations, processing &amp; storage</span></div>
           <div class="mini-row"><span class="t">Renewable Energy</span><span class="d">Solar panels, biogas &amp; efficient cooking</span></div>
           <div class="mini-row"><span class="t">Digital Infrastructure</span><span class="d">Connectivity, mobile banking, e-learning</span></div>
+          <div class="mini-row"><span class="t">Residential Area</span><span class="d">Affordable, sustainable housing for farm workers &amp; families</span></div>
+          <div class="mini-row"><span class="t">Community Facilities</span><span class="d">Schools, health posts, markets &amp; community centres</span></div>
+          <div class="mini-row"><span class="t">Water Management</span><span class="d">Rainwater harvesting, boreholes &amp; water recycling</span></div>
+          <div class="mini-row"><span class="t">Waste Management</span><span class="d">Composting, recycling &amp; circular economy approaches</span></div>
           <div class="mini-row"><span class="t">Financial Inclusion</span><span class="d">Bank &amp; microfinance partnerships for farmer loans</span></div>
+        </div>
+        <div style="grid-column:1/-1;margin-top:8px">
+          <span class="tag">Our Ecosystem Services</span>
+          <div class="mini-table" style="margin-bottom:24px">
+            <div class="mini-row"><span class="t">Training &amp; Capacity Building</span><span class="d">Modern techniques, financial literacy &amp; business skills</span></div>
+            <div class="mini-row"><span class="t">Input Supply</span><span class="d">Access to quality seeds, fertilisers &amp; equipment at fair prices</span></div>
+            <div class="mini-row"><span class="t">Market Access</span><span class="d">Guaranteed market through M Digital Food Chain &amp; other channels</span></div>
+            <div class="mini-row"><span class="t">Healthcare</span><span class="d">Basic health services &amp; health insurance</span></div>
+          </div>
+          <span class="tag">Our Social Impact Goals (5-Year Target)</span>
+          <div class="opportunity-list">
+            <div class="opp-row glass"><span class="k">Farmers Reached</span><span class="v">2,000+ out-grower farmers</span></div>
+            <div class="opp-row glass"><span class="k">Jobs Created</span><span class="v">500+ direct, 1,000+ indirect</span></div>
+            <div class="opp-row glass"><span class="k">Women Empowered</span><span class="v">40% of participants</span></div>
+            <div class="opp-row glass"><span class="k">Youth Engaged</span><span class="v">30% of participants (18–35)</span></div>
+            <div class="opp-row glass"><span class="k">Income Increase</span><span class="v">50–100% for participating farmers</span></div>
+          </div>
         </div>
       </div>
       <div class="pillar-panel" id="p3">
@@ -726,8 +916,218 @@ footer{padding:70px 0 30px;border-top:1px solid var(--glass-border)}
           <div class="mini-row"><span class="t">Farm Stays</span><span class="d">Overnight accommodation, real rural life</span></div>
           <div class="mini-row"><span class="t">Educational Tours</span><span class="d">Guided tours of farms &amp; processing facilities</span></div>
           <div class="mini-row"><span class="t">Volunteer Programs</span><span class="d">Hands-on farming for tourists &amp; students</span></div>
+          <div class="mini-row"><span class="t">Farm to Table Dining</span><span class="d">Restaurants serving fresh, farm-produced food</span></div>
           <div class="mini-row"><span class="t">Workshops &amp; Retreats</span><span class="d">Skills workshops, wellness &amp; corporate retreats</span></div>
+          <div class="mini-row"><span class="t">Camping &amp; Glamping</span><span class="d">Eco-friendly camping options with modern amenities</span></div>
         </div>
+        <div style="grid-column:1/-1;margin-top:8px">
+          <span class="tag">Who We Welcome</span>
+          <div class="mini-table">
+            <div class="mini-row"><span class="t">Domestic Tourists</span><span class="d">Urban Ghanaians seeking rural experiences &amp; weekend getaways</span></div>
+            <div class="mini-row"><span class="t">International Tourists</span><span class="d">Cultural &amp; eco tourists visiting Ghana</span></div>
+            <div class="mini-row"><span class="t">Corporate Groups</span><span class="d">Team building &amp; retreats</span></div>
+            <div class="mini-row"><span class="t">Students &amp; Researchers</span><span class="d">Educational trips &amp; fieldwork</span></div>
+            <div class="mini-row"><span class="t">Diaspora</span><span class="d">Ghanaians abroad wanting to reconnect with agricultural heritage</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section id="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Working Together</div>
+      <h2>Our partners</h2>
+      <p>We collaborate with leading organisations that share our commitment to innovation and impact.</p>
+    </div>
+
+    <div class="partner-group reveal">
+      <div class="partner-group-head"><h4>Government Partners</h4><span class="line"></span></div>
+      <div class="partner-grid">
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/mofa.png" alt="MOFA logo"></span>
+          <div><h5>Ministry of Food and Agriculture (MOFA)</h5><p>Policy alignment, technical support, access to government programs</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/gipc.png" alt="GIPC logo"></span>
+          <div><h5>Ghana Investment Promotion Centre (GIPC)</h5><p>Investment facilitation, investor connections</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/gepa.png" alt="GEPA logo"></span>
+          <div><h5>Ghana Export Promotion Authority (GEPA)</h5><p>Export development &amp; certification</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/district-assemblies.png" alt="District Assemblies logo"></span>
+          <div><h5>District Assemblies</h5><p>Land access, local partnerships, community engagement</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-group reveal">
+      <div class="partner-group-head"><h4>Development Partners</h4><span class="line"></span></div>
+      <div class="partner-grid">
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/koica.png" alt="KOICA logo"></span>
+          <div><h5>KOICA (South Korea)</h5><p>Agro-industry value chain development ($9.5M grant)</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/giz.png" alt="GIZ logo"></span>
+          <div><h5>GIZ (Germany)</h5><p>Sustainable farming &amp; rural development</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/mastercard-foundation.png" alt="MasterCard Foundation logo"></span>
+          <div><h5>MasterCard Foundation</h5><p>Youth employment &amp; agricultural transformation</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/fcdo.png" alt="FCDO logo"></span>
+          <div><h5>FCDO (UK)</h5><p>Food security &amp; rural development</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-group reveal">
+      <div class="partner-group-head"><h4>Government Programs We Align With</h4><span class="line"></span></div>
+      <div class="partner-grid">
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/feed-ghana.png" alt="Feed Ghana Programme logo"></span>
+          <div><h5>Feed Ghana Programme</h5><p>Producing strategic commodities for domestic food security</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/aeta.png" alt="AETA logo"></span>
+          <div><h5>Agriculture for Economic Transformation Agenda (AETA)</h5><p>Adopting technology, value addition &amp; agro-processing</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/24hr-economy.png" alt="24-Hour Economy Agenda logo"></span>
+          <div><h5>24-Hour Economy Agenda</h5><p>Optimising logistics &amp; processing for continuous operations</p></div>
+        </div>
+        <div class="partner-card glass">
+          <span class="p-icon"><img src="img/logos/partners/1d1f.png" alt="One District One Factory logo"></span>
+          <div><h5>One District, One Factory (1D1F)</h5><p>Contributing to district-level industrialisation</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUSTAINABILITY ============ -->
+<section id="sustainability">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Commitment</div>
+      <h2>Sustainability</h2>
+      <p>We believe in farming that lasts for generations.</p>
+    </div>
+    <div class="sustain-grid reveal">
+      <div class="sustain-card glass">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M7 20h10M12 20V10M12 10C12 10 5 10 5 3C12 3 12 10 12 10ZM12 10C12 10 19 10 19 3C12 3 12 10 12 10Z"/></svg></div>
+        <h5>Sustainable Practices</h5>
+        <p>Regenerative agriculture, minimal tillage, cover cropping.</p>
+      </div>
+      <div class="sustain-card glass">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z"/></svg></div>
+        <h5>Water Conservation</h5>
+        <p>Drip irrigation, rainwater harvesting, water recycling.</p>
+      </div>
+      <div class="sustain-card glass">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 2s6 7 6 12a6 6 0 0 1-12 0c0-5 6-12 6-12Z"/><path d="M12 2 2 7l10 5 10-5-10-5Z"/></svg></div>
+        <h5>Biodiversity</h5>
+        <p>Agroforestry, conservation of natural habitats.</p>
+      </div>
+      <div class="sustain-card glass">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+        <h5>Renewable Energy</h5>
+        <p>Solar panels, biogas, efficient cooking.</p>
+      </div>
+      <div class="sustain-card glass">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM6 8v11a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8M10 12v4M14 12v4"/></svg></div>
+        <h5>Waste Reduction</h5>
+        <p>Composting, recycling, circular economy approaches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section id="impact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">By The Numbers</div>
+      <h2>Our impact</h2>
+    </div>
+    <div class="impact-grid reveal">
+      <div class="impact-stat glass">
+        <div class="is-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></div>
+        <div class="is-num">500+ / 1,000+</div>
+        <div class="is-label">Direct &amp; indirect jobs (Year 5 target)</div>
+      </div>
+      <div class="impact-stat glass">
+        <div class="is-icon"><svg viewBox="0 0 24 24"><path d="M7 20h10M12 20V10M12 10C12 10 5 10 5 3C12 3 12 10 12 10ZM12 10C12 10 19 10 19 3C12 3 12 10 12 10Z"/></svg></div>
+        <div class="is-num">2,000+</div>
+        <div class="is-label">Out-grower farmers empowered</div>
+      </div>
+      <div class="impact-stat glass">
+        <div class="is-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/></svg></div>
+        <div class="is-num">40%</div>
+        <div class="is-label">Of participants are women</div>
+      </div>
+      <div class="impact-stat glass">
+        <div class="is-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-8 8-8s8 3.5 8 8"/></svg></div>
+        <div class="is-num">30%</div>
+        <div class="is-label">Of participants are youth (18–35)</div>
+      </div>
+      <div class="impact-stat glass">
+        <div class="is-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="is-num">50–100%</div>
+        <div class="is-label">Income increase for participating farmers</div>
+      </div>
+    </div>
+    <div class="impact-notes reveal">
+      <div class="impact-note glass">
+        <span class="in-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></span>
+        <div><h5>Food Security</h5><p>Reducing Ghana's $3B+ annual food import bill.</p></div>
+      </div>
+      <div class="impact-note glass">
+        <span class="in-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM6 8v11a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8"/></svg></span>
+        <div><h5>Post-Harvest Loss</h5><p>Reducing the 30% of output currently lost after harvest.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GET INVOLVED ============ -->
+<section id="get-involved">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Join Us</div>
+      <h2>Get involved</h2>
+    </div>
+    <div class="service-grid">
+      <div class="service-card glass">
+        <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" stroke="var(--gold-soft)"><path d="M7 20h10M12 20V10M12 10C12 10 5 10 5 3C12 3 12 10 12 10ZM12 10C12 10 19 10 19 3C12 3 12 10 12 10Z"/></svg></div>
+        <h4>For Farmers</h4>
+        <p>Looking for access to markets, training, and modern technology? Join our out-grower program and become part of Ghana's agricultural transformation.</p>
+        <a href="#contact" class="btn btn-glass" style="margin-top:14px">Join the program</a>
+      </div>
+      <div class="service-card glass">
+        <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" stroke="var(--gold-soft)"><circle cx="12" cy="12" r="10"/><path d="m16 8-4 4-2 6 6-2 4-4Z"/></svg></div>
+        <h4>For Investors</h4>
+        <p>Agriculture is a $1 trillion opportunity in Africa. M-Farms offers a unique, integrated model with high growth potential and measurable social impact.</p>
+        <a href="#contact" class="btn btn-glass" style="margin-top:14px">Talk to us</a>
+      </div>
+      <div class="service-card glass">
+        <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" stroke="var(--gold-soft)"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h4>For Partners</h4>
+        <p>Whether a government agency, development partner, or corporate organisation, we're looking for partners who share our vision for a prosperous, food-secure Africa.</p>
+        <a href="#contact" class="btn btn-glass" style="margin-top:14px">Partner with us</a>
+      </div>
+      <div class="service-card glass">
+        <div class="icon-wrap"><svg class="icon" viewBox="0 0 24 24" stroke="var(--gold-soft)"><path d="m3 11 9-8 9 8M5 10v10h14V10"/></svg></div>
+        <h4>For Visitors</h4>
+        <p>Experience the farm. Discover the future. Visit our eco villages and camping resorts for an unforgettable agri tourism experience.</p>
+        <a href="#contact" class="btn btn-glass" style="margin-top:14px">Plan a visit</a>
       </div>
     </div>
   </div>
