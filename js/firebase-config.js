@@ -1,19 +1,19 @@
-// firebase-config.js
-// Firebase SDK initialization for the M Farms site (project: Marvini Farms).
-//
-// ⚠️ Before this will work, register a Web App for this project:
-//   Firebase Console → Marvini Farms → Project Overview → "+ Add app" → Web (</>)
-//   Firebase will then show you a config object — copy those exact values into
-//   firebaseConfig below (apiKey, authDomain, projectId, etc.).
-//
-// This file only sets up the SDK connection. It does not add Auth, Firestore,
-// or Analytics on its own — import and use the pieces you actually need in
-// your app code, e.g.:
-//   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
-//   import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+// js/firebase-config.js
+// If M-Farms already has a firebase-config.js, keep yours and just make sure
+// it exports: db, doc, collection, where, query, onSnapshot.
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  doc,
+  where,
+  query,
+  onSnapshot,
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
+// Paste the web config of the Firebase project that holds the M-Farms "news" collection
+// (Project settings → General → Your apps).
 const firebaseConfig = {
   apiKey: "AIzaSyDzqezdxe_CfY8Y3fyv1eGihUZgTy4gQMY",
   authDomain: "marvini--farms.firebaseapp.com",
@@ -25,5 +25,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
-export default app;
+export { collection, doc, where, query, onSnapshot };

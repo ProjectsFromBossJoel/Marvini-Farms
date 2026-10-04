@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-9702535477307774">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9702535477307774"
+     crossorigin="anonymous"></script>
+
+<title>News | M-Farms</title>
+<meta name="description" content="The latest news and updates from M-Farms, a subsidiary of Marvini Elite Enterprises.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://marvini--farms.web.app/news.html">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="img/favicon_io/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/news.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-inner glass">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">
+        <img src="img/logos/M-Farms1.png" alt="M-Farms Logo" style="width: 45px;height:45px; border-radius: 15px;object-fit:cover">
+      </span>
+      <span>
+        <span class="brand-name">M-<span>Farms</span></span>
+        <span class="brand-sub">Marvini Elite Enterprises</span>
+      </span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>   
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li class="nav-drop" id="subDrop">
+          <a href="#" id="subDropTrigger">Networks
+            <svg class="caret" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-drop-menu glass">
+            <a href="https://marvini-elite-enterprises.web.app/" target="_blank" rel="noopener"><img src="img/logos/marvini_elite_enterprise_logo1.png" alt="">Marvini Elite Enterprises</a>
+            <a href="https://marvini-digital-food-chain.web.app/" target="_blank" rel="noopener"><img src="img/logos/M-Digital Food Chain-1.png" alt="">M-Digital Food Chain</a>
+            <a href="#" target="_blank" rel="noopener"><img src="img/logos/M-Events & Festivals1.png" alt="">M-Events &amp; Festivals</a>
+            <a href="https://marvini-elite-enterprises.web.app/consultancy-training" target="_blank" rel="noopener"><img src="img/logos/M-Consultancy & Training1.png" alt="">M-Consultancy &amp; Training</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-glass pill" style="padding:10px 20px;font-size:13.5px">Contact Us</a>
+      <a href="index.html#newsletter" class="btn btn-primary pill" style="padding:10px 22px;font-size:13.5px">Shop Products</a>
+      <button class="nav-toggle glass" id="navToggle" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileNav" class="glass">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a>  
+  <a href="index.html#services">Services</a>
+  <a href="news.html">News</a>
+  <a href="index.html#gallery">Gallery</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<main class="news-page">
+  <div class="container">
+    <div class="news-head">
+      <div class="eyebrow">News</div>
+      <h1>News and updates from the farm.</h1>
+      <p>Announcements, milestones and stories from M-Farms and the wider Marvini group.</p>
+    </div>
+
+    <div class="news-grid" id="newsListGrid" role="list">
+      <article class="glass news-card news-skeleton" aria-hidden="true">
+        <div class="news-img"></div>
+        <div class="news-body"><div class="skeleton-line w-30"></div><div class="skeleton-line w-80"></div><div class="skeleton-line w-60"></div></div>
+      </article>
+      <article class="glass news-card news-skeleton" aria-hidden="true">
+        <div class="news-img"></div>
+        <div class="news-body"><div class="skeleton-line w-30"></div><div class="skeleton-line w-80"></div><div class="skeleton-line w-60"></div></div>
+      </article>
+      <article class="glass news-card news-skeleton" aria-hidden="true">
+        <div class="news-img"></div>
+        <div class="news-body"><div class="skeleton-line w-30"></div><div class="skeleton-line w-80"></div><div class="skeleton-line w-60"></div></div>
+      </article>
+    </div>
+
+    <div class="news-pagination" id="newsPagination" hidden>
+      <button id="newsPrevBtn" class="btn btn-glass" aria-label="Previous page">← Previous</button>
+      <span class="news-page-label" id="newsPageLabel">Page 1 of 1</span>
+      <button id="newsNextBtn" class="btn btn-glass" aria-label="Next page">Next →</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><img src="img/logos/M-Farms1.png" alt="M-Farms Logo" style="width:45px;height:45px; border-radius: 15px;object-fit:cover"></span>
+          <span><span class="brand-name">M-<span>Farms</span></span><span class="brand-sub">Marvini Elite Enterprises</span></span>
+        </a>
+        <p>Growing Africa's future, naturally — smart farming, eco villages and agri tourism integrated into one ecosystem.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="index.html#about">About</a>
+        <a href="index.html#pillars">Our Pillars</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="news.html">News</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get Involved</h5>
+        <a href="index.html#contact">For Farmers</a>
+        <a href="index.html#contact">For Investors</a>
+        <a href="index.html#contact">For Partners</a>
+        <a href="index.html#contact">For Visitors</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#downloads">Downloads</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Other Subsidiaries</h5>
+        <div class="subsidiary-list">
+          <a href="https://marvini-elite-enterprises.web.app/" target="_blank" rel="noopener"><img class="sub-logo" src="img/logos/marvini_elite_enterprise_logo1.png" alt=""><span class="sub-name">Marvini Elite Enterprises</span></a>
+          <a href="https://marvini-digital-food-chain.web.app/" target="_blank" rel="noopener"><img class="sub-logo" src="img/logos/M-Digital Food Chain-1.png" alt=""><span class="sub-name">M-Digital Food Chain</span></a>
+          <a href="#" target="_blank" rel="noopener"><img class="sub-logo" src="img/logos/M-Events & Festivals1.png" alt=""><span class="sub-name">M-Events &amp; Festivals</span></a>
+          <a href="https://marvini-elite-enterprises.web.app/consultancy-training" target="_blank" rel="noopener"><img class="sub-logo" src="img/logos/M-Consultancy & Training1.png" alt=""><span class="sub-name">M-Consultancy &amp; Training</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 M-Farms | A Subsidiary of Marvini Elite Enterprises. All rights reserved.</span>
+      <span class="credit">Powered by <a href="https://myportfolio-theta-topaz-43.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#ffe100;font-size:14px;font-family:var(--ff-display);font-weight:600">TrevorMiles</a></span>
+      <span class="loc">Accra, Ghana</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site-nav.js"></script>
+<script type="module" src="js/news-list.js"></script>
+</body>
+</html>
